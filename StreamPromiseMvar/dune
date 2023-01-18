@@ -1,0 +1,25 @@
+
+ (executable
+ (name eioStreams)
+  (enabled_if (= %{system} "linux"))
+  (modules eioStreams)
+  (libraries eio_linux eio_main)
+  (modes byte exe)
+  )  
+
+
+  (executable
+  (name eioInterfaceMVar)
+   (enabled_if (= %{system} "linux"))
+   (modules eioInterfaceMVar)
+   (libraries eio_linux eio_main unified_interface)
+   (modes byte exe)
+   )  
+   
+ (executable
+  (name eioPromises)
+   (enabled_if (= %{system} "linux"))
+   (modules eioPromises)
+   (libraries eio_linux eio_main)
+   (modes byte exe)
+   )  

@@ -1,0 +1,28 @@
+
+(executable
+  (name task_suspend_eioDomainslib)
+  (enabled_if (= %{system} "linux"))
+  (modules task_suspend_eioDomainslib)
+  (libraries eio_linux eio_main domainslib unified_interface)
+  (modes byte exe)
+)  
+
+(executable
+  (name fiber_suspend_eio_domainslib)
+  (enabled_if (= %{system} "linux"))
+  (modules fiber_suspend_eio_domainslib)
+  (libraries eio_linux eio_main domainslib unified_interface)
+  (modes byte exe)
+)
+
+ 
+(executable
+ (name lwt_domainslib)
+ (modules lwt_domainslib)
+ (libraries lwt lwt.unix domainslib unified_interface)
+ (modes byte exe))
+ 
+
+
+
+  

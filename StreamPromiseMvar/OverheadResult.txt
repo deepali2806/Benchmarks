@@ -1,0 +1,20 @@
+deepali@deepali-Vostro-3546:~/Music/benchmark$ ./_build/default/eioInterfaceMVar.exe 
+use_domains, n_iters, ns/iter, promoted/iter
+      false, 10000000,  344.30,        6.6710
+       true,  1000000, 5072.43,        3.5925
+       
+       
+
+(base) deepali@deepali-Vostro-3546:~/Music/benchmark$ ./_build/default/eioPromises.exe 
+domains/spin, n_iters,  ns/iter, promoted/iter
+false/false, 10000000,  2557.78,       48.0369
+  true/true,  1000000,  5729.49,       66.3125
+ true/false,  1000000, 18597.72,       21.5938
+ 
+ 
+(base) deepali@deepali-Vostro-3546:~/Music/benchmark$ ./_build/default/eioStreams.exe 
+use_domains,  n_iters, capacity, ns/iter, promoted/iter
+      false, 10000000,        1,  474.63,        6.6749
+       true,  1000000,        1, 4975.08,        3.3682
+(base) deepali@deepali-Vostro-3546:~/Music/benchmark$ 
+

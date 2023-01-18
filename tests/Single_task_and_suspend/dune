@@ -1,0 +1,24 @@
+(executable
+ (name suspendSinglePromise)
+ (modules suspendSinglePromise)
+ (libraries lwt lwt.unix domainslib base_mvar_interface)
+ (modes byte exe))
+ 
+
+ (executable
+  (name single_Eio_fiber_suspend)
+  (enabled_if (= %{system} "linux"))
+  (modules single_Eio_fiber_suspend)
+  (libraries eio_linux eio_luv eio_main unified_interface)
+  (modes byte exe)
+  )  
+
+  (executable
+  (name single_task_domainslib_suspend)
+  (enabled_if (= %{system} "linux"))
+  (modules single_task_domainslib_suspend)
+  (libraries domainslib unified_interface)
+  (modes byte exe)
+  )  
+ 
+ 
