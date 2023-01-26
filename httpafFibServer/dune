@@ -7,5 +7,17 @@
  (name httpfibServerSequential)
  (modules httpfibServerSequential)
  (libraries domainslib eio_main httpaf httpaf-eio faraday angstrom logs.fmt containers))
+ 
+(executable 
+ (name domainManager)
+ (modules domainManager)
+ (libraries eio_main httpaf httpaf-eio faraday angstrom logs.fmt containers))
+
+
+(executable 
+ (name testEio)
+ (modules testEio)
+ (libraries eio_main))
+
 
 (vendored_dirs vendor)
