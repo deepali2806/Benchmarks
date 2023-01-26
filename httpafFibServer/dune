@@ -4,20 +4,8 @@
  (libraries domainslib eio_main httpaf httpaf-eio faraday angstrom logs.fmt containers))
 
 (executable 
- (name httpaf_fib_server_fixed_no_requests)
- (modules httpaf_fib_server_fixed_no_requests)
- (libraries domainslib eio_main httpaf httpaf-eio faraday angstrom logs.fmt containers))
-
-(executable 
  (name httpfibServerSequential)
  (modules httpfibServerSequential)
  (libraries domainslib eio_main httpaf httpaf-eio faraday angstrom logs.fmt containers))
- 
-(executable 
- (name fib_seq_fixed_no_request)
- (modules fib_seq_fixed_no_request)
- (libraries domainslib eio_main httpaf httpaf-eio faraday angstrom logs.fmt containers))
- 
-
 
 (vendored_dirs vendor)
