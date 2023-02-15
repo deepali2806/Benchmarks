@@ -11,7 +11,7 @@
   module S = Eio.Stream
   
   let n_domains = try int_of_string Sys.argv.(1) with _ -> 2
-  let str = (S.create 1000);;
+  let str = (S.create 3000);;
   let i = Atomic.make 0
   
   let rec fib n =
@@ -30,10 +30,10 @@
     | "/" -> 
               let start = Unix.gettimeofday () in            
               let index = Atomic.get i in
-              Printf.printf "Request Before Computation %d%!" index;
+              (* Printf.printf "\nRequest Before Computation %d%!" index; *)
 
               let (p, r) = Eio.Promise.create () in   
-              let value = 45 in         
+              let value = 40 in         
               S.add str (value, r); 
               let ans = Eio.Promise.await p in
   
@@ -90,7 +90,7 @@
               Eio.Domain_manager.run domain_mgr
               (fun () ->
                   while true do
-                    traceln "We are in Domain %d%!" (Domain.self ():> int);
+                    (* traceln "We are in Domain %d%!" (Domain.self ():> int); *)
                     let (value, resolver) = S.take str in
                     let ans = fib value in
                     Eio.Promise.resolve resolver ans

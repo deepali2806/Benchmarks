@@ -10,12 +10,6 @@
   module T = Domainslib.Task
   
   
-  (* let num_domains =
-      match Sys.getenv_opt "HTTPAF_EIO_DOMAINS" with
-      | Some d -> int_of_string d
-      | None -> 1 *)
-  
-  (* For testing purpose number of domains are kept as 8 *)
   let num_domains = try int_of_string Sys.argv.(1) with _ -> 1
   let pool = T.setup_pool ~num_domains:(num_domains - 1) ();;
   let values = Array.make 20000 (Unified_interface.MVar.create_empty ());;
@@ -50,7 +44,7 @@
               (* let n = (index mod 5) in *)
               Atomic.incr i;     
               
-              let _ = Unified_interface.MVar.put (values.(index)) (30) in ();
+              let _ = Unified_interface.MVar.put (values.(index)) (40) in ();
               let ans = Unified_interface.MVar.take ( result.(index)) in 
               Printf.printf "Eio : Fiber %d Fib 40 : %d" index ans;
               

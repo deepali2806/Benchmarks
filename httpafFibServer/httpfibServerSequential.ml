@@ -23,10 +23,10 @@
     match request.target with
     | "/" -> 
               let start = Unix.gettimeofday () in
-              let ans = fib (30) in
+              let ans = fib (40) in
               let response_ok = Response.create ~headers `OK in
               Reqd.respond_with_bigstring reqd response_ok text;
-              traceln "\nEio Fibre ends. Ans Fib %d:%d Ends\n%!" (45) ans;
+              traceln "\nEio Fibre ends. Ans Fib %d:%d Ends\n%!" (40) ans;
               let stop = Unix.gettimeofday () in
               let response_time = (stop -. start) in
               printf "\n Eio Fiber Response time: %fs\n%!" response_time 
