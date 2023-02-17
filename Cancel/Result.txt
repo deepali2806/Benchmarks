@@ -1,0 +1,234 @@
+=========================================================================================
+Single Producer Multiple Consumer
+=========================================================================================
+
+deepali@church:~/Benchmarks/Cancel/Cancel/singleProducerMultipleConsumer$ hyperfine --runs 3 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+Benchmark 1: ./wo_cancel.exe
+
+Are we reaching here 10000000?
+
+Total time needed to consume all the values 12.546687s
+Are we reaching here 10000000?
+
+Total time needed to consume all the values 12.408269s
+Are we reaching here 10000000?
+
+Total time needed to consume all the values 12.041246s
+  Time (mean ± σ):     12.338 s ±  0.262 s    [User: 23.167 s, System: 1.452 s]
+  Range (min … max):   12.046 s … 12.553 s    3 runs
+ 
+Benchmark 2: ./with_cancel.exe 1000
+
+Are we reaching here 10000000?Total time needed to consume all the values 13.445794s
+Are we reaching here 10000000?Total time needed to consume all the values 12.170509s
+Are we reaching here 10000000?Total time needed to consume all the values 12.516681s
+  Time (mean ± σ):     12.717 s ±  0.660 s    [User: 23.895 s, System: 1.551 s]
+  Range (min … max):   12.177 s … 13.452 s    3 runs
+ 
+Benchmark 3: ./with_cancel.exe 2000
+
+Are we reaching here 10000000?Total time needed to consume all the values 11.722696s
+Are we reaching here 10000000?Total time needed to consume all the values 12.782522s
+Are we reaching here 10000000?Total time needed to consume all the values 11.566266s  Time (mean ± σ):     12.030 s ±  0.662 s    [User: 22.353 s, System: 1.524 s]
+  Range (min … max):   11.573 s … 12.789 s    3 runs
+ 
+Benchmark 4: ./with_cancel.exe 3000
+
+Are we reaching here 10000000?Total time needed to consume all the values 12.607813s
+Are we reaching here 10000000?Total time needed to consume all the values 12.706157s
+Are we reaching here 10000000?Total time needed to consume all the values 12.626371s  Time (mean ± σ):     12.652 s ±  0.053 s    [User: 23.367 s, System: 1.771 s]
+  Range (min … max):   12.612 s … 12.713 s    3 runs
+ 
+Summary
+  './with_cancel.exe 2000' ran
+    1.03 ± 0.06 times faster than './wo_cancel.exe'
+    1.05 ± 0.06 times faster than './with_cancel.exe 3000'
+    1.06 ± 0.08 times faster than './with_cancel.exe 1000'
+deepali@church:~/Benchmarks/Cancel/Cancel/singleProducerMultipleConsumer$ hyperfine --runs 3 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+Benchmark 1: ./wo_cancel.exe
+
+Are we reaching here 10000000?
+
+Total time needed to consume all the values 12.546687s
+Are we reaching here 10000000?
+
+Total time needed to consume all the values 12.408269s
+Are we reaching here 10000000?
+
+Total time needed to consume all the values 12.041246s
+  Time (mean ± σ):     12.338 s ±  0.262 s    [User: 23.167 s, System: 1.452 s]
+  Range (min … max):   12.046 s … 12.553 s    3 runs
+ 
+Benchmark 2: ./with_cancel.exe 1000
+
+Are we reaching here 10000000?Total time needed to consume all the values 13.445794s
+Are we reaching here 10000000?Total time needed to consume all the values 12.170509s
+Are we reaching here 10000000?Total time needed to consume all the values 12.516681s
+  Time (mean ± σ):     12.717 s ±  0.660 s    [User: 23.895 s, System: 1.551 s]
+  Range (min … max):   12.177 s … 13.452 s    3 runs
+ 
+Benchmark 3: ./with_cancel.exe 2000
+
+Are we reaching here 10000000?Total time needed to consume all the values 11.722696s
+Are we reaching here 10000000?Total time needed to consume all the values 12.782522s
+Are we reaching here 10000000?Total time needed to consume all the values 11.566266s 
+  Time (mean ± σ):     12.030 s ±  0.662 s    [User: 22.353 s, System: 1.524 s]
+  Range (min … max):   11.573 s … 12.789 s    3 runs
+ 
+Benchmark 4: ./with_cancel.exe 3000
+
+Are we reaching here 10000000?Total time needed to consume all the values 12.607813s
+Are we reaching here 10000000?Total time needed to consume all the values 12.706157s
+Are we reaching here 10000000?Total time needed to consume all the values 12.626371s  
+  Time (mean ± σ):     12.652 s ±  0.053 s    [User: 23.367 s, System: 1.771 s]
+  Range (min … max):   12.612 s … 12.713 s    3 runs
+ 
+Summary
+  './with_cancel.exe 2000' ran
+    1.03 ± 0.06 times faster than './wo_cancel.exe'
+    1.05 ± 0.06 times faster than './with_cancel.exe 3000'
+    1.06 ± 0.08 times faster than './with_cancel.exe 1000'
+
+
+=========================================================================================
+Single consumer Multiple producer
+=========================================================================================
+
+
+
+
+
+
+
+=========================================================================================
+multiple consumer Multiple producer
+=========================================================================================
+
+deepali@church:~/Benchmarks/Cancel/Cancel/MultipleConsumerMultipleProducer$ hyperfine --runs 3 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+Benchmark 1: ./wo_cancel.exe
+
+Producer: Exiting
+Producer: We will stop here
+Consumer Are we reaching here 1?Total time needed to consume all the values 9.680270s
+Both the domains are finsished
+Producer: Exiting
+Producer: We will stop here
+Consumer : Are we reaching here 1?Total time needed to consume all the values 11.533636s
+Both the domains are finsished
+Producer: Exiting
+Producer: We will stop here
+Consumer : Are we reaching here 1?Total time needed to consume all the values 10.620153s
+Both the domains are finsished  Time (mean ± σ):     10.622 s ±  0.923 s    [User: 19.590 s, System: 2.061 s]
+  Range (min … max):    9.695 s … 11.542 s    3 runs
+ 
+Benchmark 2: ./with_cancel.exe 1000
+
+Are we reaching in producer ka cancellation?
+
+Are we reaching in consumer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 11.361079s
+Both the domains are finsished
+Are we reaching in producer ka cancellation?
+
+Are we reaching in consumer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 9.794236s
+Both the domains are finsished
+Are we reaching in consumer ka cancellation?
+
+Are we reaching in producer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 12.005603s
+Both the domains are finsished  Time (mean ± σ):     11.064 s ±  1.135 s    [User: 20.567 s, System: 1.922 s]
+  Range (min … max):    9.807 s … 12.014 s    3 runs
+ 
+Benchmark 3: ./with_cancel.exe 2000
+
+Are we reaching in producer ka cancellation?
+
+Are we reaching in consumer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 11.086543s
+Both the domains are finsished
+Are we reaching in consumer ka cancellation?
+
+Are we reaching in producer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 11.293858s
+Both the domains are finsished
+Are we reaching in consumer ka cancellation?
+
+Are we reaching in producer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 11.403184s
+Both the domains are finsished  Time (mean ± σ):     11.270 s ±  0.161 s    [User: 20.638 s, System: 2.024 s]
+  Range (min … max):   11.096 s … 11.413 s    3 runs
+ 
+Benchmark 4: ./with_cancel.exe 3000
+
+Are we reaching in producer ka cancellation?
+
+Are we reaching in consumer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 11.573695s
+Both the domains are finsished
+Are we reaching in producer ka cancellation?
+
+Are we reaching in consumer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 11.193003s
+Both the domains are finsished
+Are we reaching in producer ka cancellation?
+
+Are we reaching in consumer ka cancellation?
+
+Producer: Exiting
+Producer: We will stop here
+Are we reaching here 1?Total time needed to consume all the values 10.588783s
+Both the domains are finsished  Time (mean ± σ):     11.129 s ±  0.498 s    [User: 20.529 s, System: 2.306 s]
+  Range (min … max):   10.597 s … 11.584 s    3 runs
+ 
+Summary
+  './wo_cancel.exe' ran
+    1.04 ± 0.14 times faster than './with_cancel.exe 1000'
+    1.05 ± 0.10 times faster than './with_cancel.exe 3000'
+    1.06 ± 0.09 times faster than './with_cancel.exe 2000'
+
+
+
+
+
+
+=========================================================================================
+Single Producer Multiple Consumer 5 runs
+=========================================================================================
+
+
+
+=========================================================================================
+Single Consumer Multiple Producer 5 runs
+=========================================================================================
+
+
+=========================================================================================
+Multiple Producer Multiple Consumer 5 runs
+=========================================================================================
+
+
