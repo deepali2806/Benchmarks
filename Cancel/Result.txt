@@ -1,234 +1,608 @@
 =========================================================================================
-Single Producer Multiple Consumer
+Single Producer Multiple Consumer 5 runs 10M items
 =========================================================================================
-
-deepali@church:~/Benchmarks/Cancel/Cancel/singleProducerMultipleConsumer$ hyperfine --runs 3 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+eepali@church:~/Benchmarks/Cancel/singleProducerMultipleConsumer$ hyperfine --runs 5 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
 Benchmark 1: ./wo_cancel.exe
 
-Are we reaching here 10000000?
+Total time needed to consume all the values 13.069667s
 
-Total time needed to consume all the values 12.546687s
-Are we reaching here 10000000?
+Both the domains are done completed
 
-Total time needed to consume all the values 12.408269s
-Are we reaching here 10000000?
+Total time needed to consume all the values 13.323517s
 
-Total time needed to consume all the values 12.041246s
-  Time (mean ± σ):     12.338 s ±  0.262 s    [User: 23.167 s, System: 1.452 s]
-  Range (min … max):   12.046 s … 12.553 s    3 runs
+Both the domains are done completed
+
+Total time needed to consume all the values 12.241413s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.932833s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.153041s
+
+Both the domains are done completed
+  Time (mean ± σ):     12.951 s ±  0.418 s    [User: 24.393 s, System: 1.417 s]
+  Range (min … max):   12.248 s … 13.330 s    5 runs
  
 Benchmark 2: ./with_cancel.exe 1000
 
-Are we reaching here 10000000?Total time needed to consume all the values 13.445794s
-Are we reaching here 10000000?Total time needed to consume all the values 12.170509s
-Are we reaching here 10000000?Total time needed to consume all the values 12.516681s
-  Time (mean ± σ):     12.717 s ±  0.660 s    [User: 23.895 s, System: 1.551 s]
-  Range (min … max):   12.177 s … 13.452 s    3 runs
+Total time needed to consume all the values 12.711520s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.902514s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.270787s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.562251s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.988375s
+
+Both the domains are done completed
+  Time (mean ± σ):     12.894 s ±  0.272 s    [User: 23.974 s, System: 1.664 s]
+  Range (min … max):   12.569 s … 13.278 s    5 runs
  
 Benchmark 3: ./with_cancel.exe 2000
 
-Are we reaching here 10000000?Total time needed to consume all the values 11.722696s
-Are we reaching here 10000000?Total time needed to consume all the values 12.782522s
-Are we reaching here 10000000?Total time needed to consume all the values 11.566266s  Time (mean ± σ):     12.030 s ±  0.662 s    [User: 22.353 s, System: 1.524 s]
-  Range (min … max):   11.573 s … 12.789 s    3 runs
+Total time needed to consume all the values 11.584325s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.742485s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.079462s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.050066s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.735359s
+
+Both the domains are done completed
+  Time (mean ± σ):     12.646 s ±  0.613 s    [User: 23.653 s, System: 1.480 s]
+  Range (min … max):   11.589 s … 13.088 s    5 runs
  
 Benchmark 4: ./with_cancel.exe 3000
 
-Are we reaching here 10000000?Total time needed to consume all the values 12.607813s
-Are we reaching here 10000000?Total time needed to consume all the values 12.706157s
-Are we reaching here 10000000?Total time needed to consume all the values 12.626371s  Time (mean ± σ):     12.652 s ±  0.053 s    [User: 23.367 s, System: 1.771 s]
-  Range (min … max):   12.612 s … 12.713 s    3 runs
+Total time needed to consume all the values 12.526279s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.645335s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.827999s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.161906s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.031962s
+
+Both the domains are done completed
+  Time (mean ± σ):     12.845 s ±  0.264 s    [User: 23.875 s, System: 1.588 s]
+  Range (min … max):   12.531 s … 13.168 s    5 runs
  
 Summary
   './with_cancel.exe 2000' ran
-    1.03 ± 0.06 times faster than './wo_cancel.exe'
-    1.05 ± 0.06 times faster than './with_cancel.exe 3000'
-    1.06 ± 0.08 times faster than './with_cancel.exe 1000'
-deepali@church:~/Benchmarks/Cancel/Cancel/singleProducerMultipleConsumer$ hyperfine --runs 3 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+    1.02 ± 0.05 times faster than './with_cancel.exe 3000'
+    1.02 ± 0.05 times faster than './with_cancel.exe 1000'
+    1.02 ± 0.06 times faster than './wo_cancel.exe'
+
+
+=========================================================================================
+Single Consumer Multiple Producer 5 runs 10M items
+=========================================================================================
+
+deepali@church:~/Benchmarks/Cancel/singleConsumerMultipleProducer$ hyperfine --runs 5 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
 Benchmark 1: ./wo_cancel.exe
 
-Are we reaching here 10000000?
+Total time needed to consume all the values 13.528568s
 
-Total time needed to consume all the values 12.546687s
-Are we reaching here 10000000?
+Both the domains are done completed
 
-Total time needed to consume all the values 12.408269s
-Are we reaching here 10000000?
+Total time needed to consume all the values 13.169640s
 
-Total time needed to consume all the values 12.041246s
-  Time (mean ± σ):     12.338 s ±  0.262 s    [User: 23.167 s, System: 1.452 s]
-  Range (min … max):   12.046 s … 12.553 s    3 runs
+Both the domains are done completed
+
+Total time needed to consume all the values 13.581307s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.005280s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.231878s
+
+Both the domains are done completed
+  Time (mean ± σ):     13.344 s ±  0.248 s    [User: 24.971 s, System: 1.540 s]
+  Range (min … max):   13.043 s … 13.627 s    5 runs
  
 Benchmark 2: ./with_cancel.exe 1000
 
-Are we reaching here 10000000?Total time needed to consume all the values 13.445794s
-Are we reaching here 10000000?Total time needed to consume all the values 12.170509s
-Are we reaching here 10000000?Total time needed to consume all the values 12.516681s
-  Time (mean ± σ):     12.717 s ±  0.660 s    [User: 23.895 s, System: 1.551 s]
-  Range (min … max):   12.177 s … 13.452 s    3 runs
+Total time needed to consume all the values 13.262741s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.295270s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.992308s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.257314s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.092870s
+
+Both the domains are done completed
+  Time (mean ± σ):     13.217 s ±  0.130 s    [User: 24.690 s, System: 1.478 s]
+  Range (min … max):   13.029 s … 13.333 s    5 runs
  
 Benchmark 3: ./with_cancel.exe 2000
 
-Are we reaching here 10000000?Total time needed to consume all the values 11.722696s
-Are we reaching here 10000000?Total time needed to consume all the values 12.782522s
-Are we reaching here 10000000?Total time needed to consume all the values 11.566266s 
-  Time (mean ± σ):     12.030 s ±  0.662 s    [User: 22.353 s, System: 1.524 s]
-  Range (min … max):   11.573 s … 12.789 s    3 runs
+Total time needed to consume all the values 13.013158s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.731149s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.366532s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.268572s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.057556s
+
+Both the domains are done completed
+  Time (mean ± σ):     12.926 s ±  0.528 s    [User: 24.151 s, System: 1.500 s]
+  Range (min … max):   12.092 s … 13.404 s    5 runs
  
 Benchmark 4: ./with_cancel.exe 3000
 
-Are we reaching here 10000000?Total time needed to consume all the values 12.607813s
-Are we reaching here 10000000?Total time needed to consume all the values 12.706157s
-Are we reaching here 10000000?Total time needed to consume all the values 12.626371s  
-  Time (mean ± σ):     12.652 s ±  0.053 s    [User: 23.367 s, System: 1.771 s]
-  Range (min … max):   12.612 s … 12.713 s    3 runs
+Total time needed to consume all the values 13.018744s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.509560s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.699813s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 13.092156s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 12.486048s
+
+Both the domains are done completed
+  Time (mean ± σ):     12.799 s ±  0.281 s    [User: 23.690 s, System: 1.574 s]
+  Range (min … max):   12.526 s … 13.128 s    5 runs
  
 Summary
-  './with_cancel.exe 2000' ran
-    1.03 ± 0.06 times faster than './wo_cancel.exe'
-    1.05 ± 0.06 times faster than './with_cancel.exe 3000'
-    1.06 ± 0.08 times faster than './with_cancel.exe 1000'
-
-
-=========================================================================================
-Single consumer Multiple producer
-=========================================================================================
-
-
-
-
+  './with_cancel.exe 3000' ran
+    1.01 ± 0.05 times faster than './with_cancel.exe 2000'
+    1.03 ± 0.02 times faster than './with_cancel.exe 1000'
+    1.04 ± 0.03 times faster than './wo_cancel.exe'
 
 
 
 =========================================================================================
-multiple consumer Multiple producer
+Multiple Producer Multiple Consumer 5 runs 10M items
 =========================================================================================
-
-deepali@church:~/Benchmarks/Cancel/Cancel/MultipleConsumerMultipleProducer$ hyperfine --runs 3 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+deepali@church:~/Benchmarks/Cancel/MultipleConsumerMultipleProducer$ hyperfine --runs 5 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
 Benchmark 1: ./wo_cancel.exe
+Total time needed to consume all the values 11.346148s
 
-Producer: Exiting
-Producer: We will stop here
-Consumer Are we reaching here 1?Total time needed to consume all the values 9.680270s
 Both the domains are finsished
-Producer: Exiting
-Producer: We will stop here
-Consumer : Are we reaching here 1?Total time needed to consume all the values 11.533636s
+Total time needed to consume all the values 9.875231s
+
 Both the domains are finsished
-Producer: Exiting
-Producer: We will stop here
-Consumer : Are we reaching here 1?Total time needed to consume all the values 10.620153s
-Both the domains are finsished  Time (mean ± σ):     10.622 s ±  0.923 s    [User: 19.590 s, System: 2.061 s]
-  Range (min … max):    9.695 s … 11.542 s    3 runs
+Total time needed to consume all the values 10.714136s
+
+Both the domains are finsished
+Total time needed to consume all the values 9.469584s
+
+Both the domains are finsished
+Total time needed to consume all the values 10.018845s
+
+Both the domains are finsished
+  Time (mean ± σ):     10.297 s ±  0.743 s    [User: 19.225 s, System: 1.725 s]
+  Range (min … max):    9.485 s … 11.358 s    5 runs
  
 Benchmark 2: ./with_cancel.exe 1000
+Total time needed to consume all the values 9.441194s
 
-Are we reaching in producer ka cancellation?
-
-Are we reaching in consumer ka cancellation?
-
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 11.361079s
 Both the domains are finsished
-Are we reaching in producer ka cancellation?
+Total time needed to consume all the values 11.225304s
 
-Are we reaching in consumer ka cancellation?
-
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 9.794236s
 Both the domains are finsished
-Are we reaching in consumer ka cancellation?
+Total time needed to consume all the values 10.881220s
 
-Are we reaching in producer ka cancellation?
+Both the domains are finsished
+Total time needed to consume all the values 11.629215s
 
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 12.005603s
-Both the domains are finsished  Time (mean ± σ):     11.064 s ±  1.135 s    [User: 20.567 s, System: 1.922 s]
-  Range (min … max):    9.807 s … 12.014 s    3 runs
+Both the domains are finsished
+Total time needed to consume all the values 9.960171s
+
+Both the domains are finsished
+  Time (mean ± σ):     10.638 s ±  0.906 s    [User: 19.722 s, System: 1.815 s]
+  Range (min … max):    9.453 s … 11.642 s    5 runs
  
 Benchmark 3: ./with_cancel.exe 2000
+Total time needed to consume all the values 11.265389s
 
-Are we reaching in producer ka cancellation?
-
-Are we reaching in consumer ka cancellation?
-
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 11.086543s
 Both the domains are finsished
-Are we reaching in consumer ka cancellation?
+Total time needed to consume all the values 10.286289s
 
-Are we reaching in producer ka cancellation?
-
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 11.293858s
 Both the domains are finsished
-Are we reaching in consumer ka cancellation?
+Total time needed to consume all the values 11.543110s
 
-Are we reaching in producer ka cancellation?
+Both the domains are finsished
+Total time needed to consume all the values 10.929852s
 
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 11.403184s
-Both the domains are finsished  Time (mean ± σ):     11.270 s ±  0.161 s    [User: 20.638 s, System: 2.024 s]
-  Range (min … max):   11.096 s … 11.413 s    3 runs
+Both the domains are finsished
+Total time needed to consume all the values 10.808847s
+
+Both the domains are finsished
+  Time (mean ± σ):     10.976 s ±  0.476 s    [User: 20.284 s, System: 2.061 s]
+  Range (min … max):   10.297 s … 11.550 s    5 runs
  
 Benchmark 4: ./with_cancel.exe 3000
+Total time needed to consume all the values 10.479548s
 
-Are we reaching in producer ka cancellation?
-
-Are we reaching in consumer ka cancellation?
-
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 11.573695s
 Both the domains are finsished
-Are we reaching in producer ka cancellation?
+Total time needed to consume all the values 10.734251s
 
-Are we reaching in consumer ka cancellation?
-
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 11.193003s
 Both the domains are finsished
-Are we reaching in producer ka cancellation?
+Total time needed to consume all the values 10.785633s
 
-Are we reaching in consumer ka cancellation?
+Both the domains are finsished
+Total time needed to consume all the values 11.556144s
 
-Producer: Exiting
-Producer: We will stop here
-Are we reaching here 1?Total time needed to consume all the values 10.588783s
-Both the domains are finsished  Time (mean ± σ):     11.129 s ±  0.498 s    [User: 20.529 s, System: 2.306 s]
-  Range (min … max):   10.597 s … 11.584 s    3 runs
+Both the domains are finsished
+Total time needed to consume all the values 10.641337s
+
+Both the domains are finsished
+  Time (mean ± σ):     10.855 s ±  0.431 s    [User: 19.898 s, System: 2.007 s]
+  Range (min … max):   10.489 s … 11.596 s    5 runs
  
 Summary
   './wo_cancel.exe' ran
-    1.04 ± 0.14 times faster than './with_cancel.exe 1000'
-    1.05 ± 0.10 times faster than './with_cancel.exe 3000'
-    1.06 ± 0.09 times faster than './with_cancel.exe 2000'
+    1.03 ± 0.12 times faster than './with_cancel.exe 1000'
+    1.05 ± 0.09 times faster than './with_cancel.exe 3000'
+    1.07 ± 0.09 times faster than './with_cancel.exe 2000'
 
 
+=========================================================================================
+Single Producer Multiple Consumer 5 runs 1M items
+=========================================================================================
 
+deepali@church:~/Benchmarks/Cancel/singleProducerMultipleConsumer$ hyperfine --runs 5 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+Benchmark 1: ./wo_cancel.exe
+
+Total time needed to consume all the values 0.712689s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.037291s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.014393s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.056815s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.701809s
+
+Both the domains are done completed
+  Time (mean ± σ):     910.7 ms ± 180.9 ms    [User: 1684.8 ms, System: 135.6 ms]
+  Range (min … max):   707.8 ms … 1062.6 ms    5 runs
+ 
+Benchmark 2: ./with_cancel.exe 1000
+
+Total time needed to consume all the values 0.717383s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.242649s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.831800s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.005076s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.739206s
+
+Both the domains are done completed
+  Time (mean ± σ):     914.5 ms ± 219.1 ms    [User: 1678.3 ms, System: 135.2 ms]
+  Range (min … max):   725.5 ms … 1250.3 ms    5 runs
+ 
+Benchmark 3: ./with_cancel.exe 2000
+
+Total time needed to consume all the values 1.074585s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.702940s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.961794s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.076667s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.829210s
+
+Both the domains are done completed
+  Time (mean ± σ):     934.6 ms ± 161.7 ms    [User: 1739.3 ms, System: 124.0 ms]
+  Range (min … max):   709.1 ms … 1083.2 ms    5 runs
+ 
+Benchmark 4: ./with_cancel.exe 3000
+
+Total time needed to consume all the values 1.132736s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.031736s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.694843s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.055613s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.738647s
+
+Both the domains are done completed
+  Time (mean ± σ):     937.8 ms ± 198.9 ms    [User: 1731.0 ms, System: 142.1 ms]
+  Range (min … max):   700.9 ms … 1141.7 ms    5 runs
+ 
+Summary
+  './wo_cancel.exe' ran
+    1.00 ± 0.31 times faster than './with_cancel.exe 1000'
+    1.03 ± 0.27 times faster than './with_cancel.exe 2000'
+    1.03 ± 0.30 times faster than './with_cancel.exe 3000'
 
 
 
 =========================================================================================
-Single Producer Multiple Consumer 5 runs
+Single Consumer Multiple Producer 5 runs 1M items
+=========================================================================================
+deepali@church:~/Benchmarks/Cancel/singleConsumerMultipleProducer$ hyperfine --runs 5 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+Benchmark 1: ./wo_cancel.exe
+
+Total time needed to consume all the values 1.090904s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.912341s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.729050s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.712762s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.936673s
+
+Both the domains are done completed
+  Time (mean ± σ):     911.2 ms ± 158.1 ms    [User: 1676.4 ms, System: 133.4 ms]
+  Range (min … max):   746.6 ms … 1129.3 ms    5 runs
+ 
+Benchmark 2: ./with_cancel.exe 1000
+
+Total time needed to consume all the values 0.698012s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.727549s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.144578s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.092322s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.198308s
+
+Both the domains are done completed
+  Time (mean ± σ):      1.005 s ±  0.239 s    [User: 1.848 s, System: 0.147 s]
+  Range (min … max):    0.733 s …  1.235 s    5 runs
+ 
+Benchmark 3: ./with_cancel.exe 2000
+
+Total time needed to consume all the values 1.202973s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.072005s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.710829s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.195639s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.033754s
+
+Both the domains are done completed
+  Time (mean ± σ):      1.075 s ±  0.202 s    [User: 1.996 s, System: 0.135 s]
+  Range (min … max):    0.737 s …  1.232 s    5 runs
+ 
+Benchmark 4: ./with_cancel.exe 3000
+
+Total time needed to consume all the values 1.057240s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.146409s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.063286s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 0.692734s
+
+Both the domains are done completed
+
+Total time needed to consume all the values 1.056790s
+
+Both the domains are done completed
+  Time (mean ± σ):      1.037 s ±  0.176 s    [User: 1.902 s, System: 0.163 s]
+  Range (min … max):    0.731 s …  1.182 s    5 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet PC without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Summary
+  './wo_cancel.exe' ran
+    1.10 ± 0.32 times faster than './with_cancel.exe 1000'
+    1.14 ± 0.28 times faster than './with_cancel.exe 3000'
+    1.18 ± 0.30 times faster than './with_cancel.exe 2000'
+
+
+=========================================================================================
+Multiple Producer Multiple Consumer 5 runs 1M items
 =========================================================================================
 
+deepali@church:~/Benchmarks/Cancel/MultipleConsumerMultipleProducer$ hyperfine --runs 5 './wo_cancel.exe' './with_cancel.exe 1000' './with_cancel.exe 2000' './with_cancel.exe 3000' --export-markdown spmc.csv --show-output 
+Benchmark 1: ./wo_cancel.exe
+Total time needed to consume all the values 0.837531s
 
+Both the domains are finsished
+Total time needed to consume all the values 0.604702s
 
-=========================================================================================
-Single Consumer Multiple Producer 5 runs
-=========================================================================================
+Both the domains are finsished
+Total time needed to consume all the values 0.601016s
 
+Both the domains are finsished
+Total time needed to consume all the values 0.657929s
 
-=========================================================================================
-Multiple Producer Multiple Consumer 5 runs
-=========================================================================================
+Both the domains are finsished
+Total time needed to consume all the values 0.798160s
 
+Both the domains are finsished
+  Time (mean ± σ):     710.3 ms ± 110.1 ms    [User: 1313.8 ms, System: 133.4 ms]
+  Range (min … max):   609.0 ms … 847.5 ms    5 runs
+ 
+Benchmark 2: ./with_cancel.exe 1000
+Total time needed to consume all the values 0.957308s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.988333s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.842208s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.655984s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.876469s
+
+Both the domains are finsished
+  Time (mean ± σ):     873.3 ms ± 128.5 ms    [User: 1595.9 ms, System: 174.5 ms]
+  Range (min … max):   669.9 ms … 997.1 ms    5 runs
+ 
+Benchmark 3: ./with_cancel.exe 2000
+Total time needed to consume all the values 0.654681s
+
+Both the domains are finsished
+Total time needed to consume all the values 1.013770s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.596941s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.578183s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.569149s
+
+Both the domains are finsished
+  Time (mean ± σ):     693.9 ms ± 187.2 ms    [User: 1258.9 ms, System: 150.2 ms]
+  Range (min … max):   579.2 ms … 1022.5 ms    5 runs
+ 
+Benchmark 4: ./with_cancel.exe 3000
+Total time needed to consume all the values 0.885732s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.809060s
+
+Both the domains are finsished
+Total time needed to consume all the values 1.007941s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.884363s
+
+Both the domains are finsished
+Total time needed to consume all the values 0.619742s
+
+Both the domains are finsished
+  Time (mean ± σ):     851.8 ms ± 144.2 ms    [User: 1560.8 ms, System: 172.6 ms]
+  Range (min … max):   627.1 ms … 1017.2 ms    5 runs
+ 
+Summary
+  './with_cancel.exe 2000' ran
+    1.02 ± 0.32 times faster than './wo_cancel.exe'
+    1.23 ± 0.39 times faster than './with_cancel.exe 3000'
+    1.26 ± 0.39 times faster than './with_cancel.exe 1000'
 
